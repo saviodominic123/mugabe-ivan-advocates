@@ -4,35 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - MUGABE IVAN & CO. ADVOCATES</title>
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <div class="wrapper">
         <!-- Header / Navbar -->
-        <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="index.html"><img src="images/logo.png" alt="Mugabe Ivan Advocates" height="40"></a>
-                </div>
+       <header>
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="MUGABE IVAN & CO. ADVOCATES Logo" height="50">
+      </a>
+    </div>
 
-                <div class="hamburger" id="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+    <!-- Hamburger menu for mobile -->
+    <div class="hamburger" id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
 
-                <ul id="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="cases.html">Cases</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <!-- Navigation links -->
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="cases.html">Cases</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
         <!-- Hero Section -->
         <section id="page-hero">
@@ -43,51 +48,62 @@
         </section>
 
         <!-- Contact Section -->
-        <!-- Contact Section -->
-<section class="container contact-section">
-    <h2 class="section-title">Get in Touch</h2>
+        <section class="container contact-section">
+            <h2 class="section-title">Get in Touch</h2>
+      <section id="contact" class="contact-section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p class="contact-intro">We’re here to assist you. Send us a message and we’ll respond shortly.</p>
+
     <div class="contact-wrapper">
-        <!-- Contact Form -->
-        <form id="contact-form" action="#" method="POST" class="contact-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your full name">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="you@example.com">
-
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required placeholder="Subject">
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required placeholder="Your message here"></textarea>
-
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-
-        <!-- Contact Info -->
-        <div class="contact-info">
-            <h3>Office Info</h3>
-            <p><strong>Address:</strong> 123 Legal Street, Kampala, Uganda</p>
-            <p><strong>Phone:</strong> +256 700 123 456</p>
-            <p><strong>Email:</strong> info@mugabeivan.com</p>
-
-            <h3>Find Us</h3>
-            <!-- Map placeholder -->
-            <div class="map-container">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.1234567890123!2d32.5825!3d0.3476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db8b2f0f0f0f0%3A0x123456789abcdef!2s123%20Legal%20Street%2C%20Kampala%2C%20Uganda!5e0!3m2!1sen!2sug!4v1700000000000!5m2!1sen!2sug" 
-        width="100%" 
-        height="250" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
-
+      <!-- Contact Form -->
+      <form action="https://formspree.io/f/xovyjebj" method="POST" class="contact-form">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" placeholder="Enter your name" required>
         </div>
+
+        <div class="form-group">
+          <label>Your Email</label>
+          <input type="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" name="subject" placeholder="Message subject" required>
+        </div>
+
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-send">Send Message</button>
+      </form>
+
+      <!-- Contact Info + Map -->
+      <div class="contact-info">
+        <div class="info-box">
+          <h3>Office</h3>
+          <p>Kisozi Close, Kampala, Uganda</p>
+          <p><strong>Phone:</strong> +256 700 000000</p>
+          <p><strong>Email:</strong> yourfirm@gmail.com</p>
+        </div>
+
+        <div class="map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.75632862414!2d32.57314287588106!3d0.3193952640193759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb7c0d99c097%3A0x818333430082ad86!2sKisozi%20Cl%2C%20Kampala!5e0!3m2!1sen!2sug!4v1763049764631!5m2!1sen!2sug"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
+
 
         <!-- Footer -->
         <footer>
@@ -96,7 +112,6 @@
                     <h3>About Us</h3>
                     <p>MUGABE IVAN & CO. ADVOCATES is a leading law firm in Uganda providing professional legal services in corporate, civil, and criminal law.</p>
                 </div>
-
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
@@ -108,14 +123,12 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-section">
                     <h3>Contact Us</h3>
                     <p>Office: 123 Legal Street, Kampala, Uganda</p>
                     <p>Phone: +256 700 123 456</p>
                     <p>Email: info@mugabeivan.com</p>
                 </div>
-
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <div class="social-links">
@@ -135,5 +148,38 @@
 
     <script src="js/main.js" defer></script>
     <script src="js/validation.js" defer></script>
+    <script>
+        // Formspree success/failure handling
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("contact-form");
+            const statusDiv = document.getElementById("form-status");
+
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const data = new FormData(form);
+
+                fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        statusDiv.textContent = "✅ Your message has been sent successfully!";
+                        statusDiv.style.color = "#0a1f44";
+                        statusDiv.style.fontWeight = "600";
+                        form.reset();
+                    } else {
+                        statusDiv.textContent = "❌ Oops! There was a problem. Please try again.";
+                        statusDiv.style.color = "red";
+                    }
+                }).catch(error => {
+                    statusDiv.textContent = "❌ Oops! There was a problem. Please try again.";
+                    statusDiv.style.color = "red";
+                });
+            });
+        });
+    </script>
 </body>
 </html>

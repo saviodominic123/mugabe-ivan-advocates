@@ -1,0 +1,22 @@
+mugabe-ivan-advocates/
+├─ index.html                # Home page
+├─ about.html                # About the firm / biography
+├─ services.html             # Services offered
+├─ cases.html                # Notable cases / practice areas
+├─ team.html                 # Lawyers / staff profiles
+├─ contact.html              # Contact page (with logo, form & map)
+├─ privacy.html              # Privacy policy
+├─ css/
+│  ├─ main.css               # Core styles (desktop + contact section)
+│  └─ responsive.css         # Responsive overrides
+├─ js/
+│  ├─ main.js                # Site interactions (menu, sliders, animations)
+│  └─ validation.js          # Form validation (optional)
+├─ images/                   # Images folder
+│  ├─ logo.png               # Company logo
+│  ├─ hero.jpg               # Hero image for pages
+│  └─ other images…          # Any other images
+├─ fonts/                    # Optional custom fonts (woff, woff2)
+├─ favicon.ico               # Browser icon
+├─ robots.txt                # Search engine rules
+└─ sitemap.xml               # Optional for SEO
