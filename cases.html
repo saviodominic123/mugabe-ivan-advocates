@@ -12,28 +12,28 @@
     <div class="wrapper">
         <!-- Header / Navbar -->
        <header>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="cases.html">
-        <img src="images/logo.jpg" alt="MUGABE IVAN & CO. ADVOCATES Logo" height="50">
-      </a>
-    </div>
+  <header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Mugabe Ivan Advocates">
+        </a>
 
-    <div class="hamburger" id="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
+        <!-- Hamburger -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-    <ul id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="cases.html" class="active">Cases</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
 
@@ -123,5 +123,18 @@
 
     <script src="js/main.js" defer></script>
     <script src="js/validation.js" defer></script>
+    ...
+<!-- Your page content here -->
+
+<!-- JS goes here (RIGHT BEFORE </body>) -->
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
+
 </body>
 </html>

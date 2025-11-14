@@ -17,36 +17,95 @@
     }
 }
 
+/* =======================================================
+   MOBILE NAVIGATION – FIXED + PROFESSIONAL
+======================================================= */
+@media (max-width: 768px) {
+
+    /* Fix navbar height and alignment */
+    .navbar {
+        height: 60px !important;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #031E3A;
+        z-index: 9999;
+    }
+
+    .logo img {
+        height: 40px !important;
+    }
+
+    /* Hamburger clickable */
+    .hamburger {
+        cursor: pointer;
+        z-index: 10000;
+    }
+
+    /* Slide menu panel */
+    #nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 75%;
+        background: #031E3A;
+        padding-top: 90px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        transition: right 0.3s ease-in-out;
+        z-index: 9998;
+    }
+
+    #nav-links.active {
+        right: 0;
+    }
+
+    #nav-links li a {
+        color: #fff;
+        font-size: 22px;
+        padding: 12px 25px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Prevent hero from being pushed down */
+    .wrapper,
+    body {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+}
+
 /* ==============================
    TABLET / MOBILE LAYOUT
 ============================== */
 @media (max-width: 768px) {
-    /* Navbar already handled in main.css */
-    
-    .wrapper {
-        padding-top: 60px; /* ensure hero not hidden by fixed navbar */
-    }
 
-    /* Hero adjustments */
+    /* HERO FIX */
     #hero {
-        height: 400px;
+        height: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     #hero .hero-text h1 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     #hero .hero-text p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
-    /* Services stack vertically */
+    /* Services stack */
     .services ul {
         flex-direction: column;
         align-items: center;
     }
 
-    /* CTA section adjustments */
     .cta h2 {
         font-size: 1.5rem;
     }
@@ -64,6 +123,7 @@
    SMALL MOBILE DEVICES
 ============================== */
 @media (max-width: 480px) {
+
     /* Hero smaller */
     #hero {
         height: 300px;
@@ -74,14 +134,14 @@
     }
 
     #hero .hero-text h1 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     #hero .hero-text p {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 
-    /* Footer stack vertically */
+    /* Footer stack */
     footer .footer-container {
         flex-direction: column;
         text-align: center;
@@ -92,22 +152,26 @@
     }
 
     .services ul li {
-        width: 80%;
-        padding: 10px;
+        width: 85%;
+        padding: 12px;
     }
 
     .cta h2 {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 
     .cta p {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 
     .btn {
         padding: 7px 18px;
     }
 }
+
+/* ==============================
+   CONTACT PAGE MAP ALIGNMENT
+============================== */
 .contact-map {
     margin: 20px 0;
 }

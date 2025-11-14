@@ -1911,3 +1911,124 @@ footer .copyright {
         padding-top: 60px; /* prevent content overlap */
     }
 }
+/* NAVBAR FIX */
+.navbar {
+    width: 100%;
+    padding: 15px 20px;
+    background: #001f3f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 600;
+}
+
+/* Mobile menu hidden */
+@media(max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 65%;
+        background: #001f3f;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+        transition: 0.3s;
+    }
+}
+/* ============================
+   MOBILE NAVIGATION
+============================ */
+@media (max-width: 768px) {
+
+  /* Hide menu by default */
+  #navLinks {
+    position: absolute;
+    top: 60px; /* below navbar */
+    right: 0;
+    width: 100%;
+    background: #ffffff;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  /* When menu is toggled */
+  #navLinks.open {
+    display: flex;
+  }
+
+  /* Navbar links on mobile */
+  #navLinks li {
+    margin: 12px 0;
+  }
+
+  /* Hamburger always visible on mobile */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* Hide normal desktop menu */
+  nav ul {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+    .hero-text {
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: auto;
+    }
+}
+#navLinks a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+}

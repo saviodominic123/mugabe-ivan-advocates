@@ -8,25 +8,28 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<<header>
-  <nav class="navbar">
-    <!-- Logo -->
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/logo.jpg" alt="MUGABE IVAN & CO. ADVOCATES Logo" height="50">
-      </a>
-    </div>
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Mugabe Ivan Advocates">
+        </a>
 
-    <!-- Navigation links -->
-    <ul id="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="cases.html">Cases</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+        <!-- Hamburger -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
 
@@ -110,5 +113,16 @@
     <!-- JS -->
     <script src="js/main.js" defer></script>
     <script src="js/validation.js" defer></script>
+ ...
+<!-- Your page content here -->
+
+<!-- JS goes here (RIGHT BEFORE </body>) -->
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("open");
+}
+</script>
+
 </body>
 </html>
+   
