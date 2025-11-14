@@ -312,47 +312,49 @@ footer .copyright {
 }
 
 /* ==============================
-   FOOTER - ULTRA COMPACT MOBILE
-=============================== */
-@media (max-width: 768px) {
+   ULTRA-COMPACT MOBILE FOOTER
+============================== */
+@media (max-width: 480px) {
     footer {
-        padding: 4px 6px;        /* tiny padding */
-        font-size: 0.65rem;      /* smaller text */
+        padding: 10px 5px;  /* minimal padding */
+        font-size: 0.7rem;  /* smaller text */
     }
 
     footer .footer-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 3px;                /* minimal spacing */
-    }
-
-    footer .footer-section {
-        margin: 2px 0;           /* very tight margins */
+        flex-direction: column;  /* stack sections vertically */
+        gap: 5px;               /* minimal space between sections */
         text-align: center;
     }
 
+    footer .footer-section {
+        margin: 3px 0;          /* reduce spacing between sections */
+        padding: 0;             /* remove extra padding */
+    }
+
     footer .footer-section h3 {
-        font-size: 0.7rem;       /* smaller headings */
-        margin-bottom: 2px;
+        font-size: 0.85rem;     /* smaller headings */
+        margin-bottom: 3px;
     }
 
     footer .footer-section p,
     footer .footer-section li {
-        font-size: 0.65rem;      /* very small text */
-        line-height: 1.1;
+        font-size: 0.7rem;      /* smaller text */
+        line-height: 1.2;
+        margin: 2px 0;
     }
 
     footer .footer-section ul li a {
-        font-size: 0.65rem;
+        font-size: 0.7rem;
     }
 
     footer .social-links a {
-        font-size: 0.65rem;
-        margin-right: 4px;
+        font-size: 0.75rem;     /* smaller social icons */
+        margin: 0 4px;
     }
 
     footer .copyright {
-        font-size: 0.6rem;
-        margin-top: 3px;
+        font-size: 0.65rem;
+        margin-top: 5px;
     }
 }
+
