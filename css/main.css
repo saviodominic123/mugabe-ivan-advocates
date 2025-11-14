@@ -65,27 +65,18 @@ body {
     color: #f39c12;
 }
 
-/* ==============================
-   HAMBURGER MENU
-============================== */
+/* Hamburger */
 .hamburger {
     display: none;
     flex-direction: column;
-    justify-content: space-between;
-    width: 25px;
-    height: 20px;
     cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    z-index: 300;
+    gap: 5px;
 }
 
 .hamburger .bar {
-    width: 100%;
+    width: 25px;
     height: 3px;
     background-color: #fff;
-    border-radius: 2px;
     transition: all 0.3s ease;
 }
 
@@ -100,42 +91,35 @@ body {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ============= MOBILE NAV SLIDE ============= */
+/* ============= MOBILE NAVBAR FIX ============= */
 @media (max-width: 768px) {
-    #nav-links {
+
+    /* Show hamburger */
+    .hamburger {
         display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        right: -250px; /* start hidden off-screen */
-        width: 250px;
-        height: 100%;
-        background-color: #0b1d3a;
-        padding-top: 60px;
-        text-align: center;
-        transition: right 0.4s ease; /* smooth slide */
-        z-index: 299;
-        border-radius: 0 0 0 6px;
     }
 
+    /* Mobile menu (hidden by default) */
+    #nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: #0b1d3a;
+        flex-direction: column;
+        padding: 15px 0;
+        display: none;
+        text-align: center;
+        z-index: 200;
+    }
+
+    /* When opened */
     #nav-links.active {
-        right: 0; /* slide in when active */
+        display: flex;
     }
 
     #nav-links li {
-        margin: 20px 0;
-    }
-
-    #nav-links li a {
-        color: #fff;
-        font-weight: bold;
-        font-size: 18px;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    #nav-links li a:hover {
-        color: #f39c12;
+        margin: 12px 0;
     }
 }
 
@@ -325,47 +309,44 @@ footer .copyright {
     #hero .hero-text p {
         font-size: 0.8rem;
     }
+}
 
-    /* ULTRA-COMPACT MOBILE FOOTER */
+/* ===== MOBILE FOOTER - SUPER COMPACT ===== */
+@media (max-width: 768px) {
     footer {
-        padding: 10px 5px;
-        font-size: 0.7rem;
+        padding: 8px 10px !important;  /* minimal top/bottom padding */
+        font-size: 0.75rem !important; /* smaller text */
     }
 
     footer .footer-container {
-        flex-direction: column;
-        gap: 5px;
-        text-align: center;
+        flex-direction: column !important;  /* stack vertically */
+        align-items: center !important;
+        gap: 5px !important;               /* tiny spacing between sections */
     }
 
     footer .footer-section {
-        margin: 3px 0;
-        padding: 0;
+        margin: 3px 0 !important;          /* very tight section margins */
+        text-align: center !important;
     }
 
     footer .footer-section h3 {
-        font-size: 0.85rem;
-        margin-bottom: 3px;
+        font-size: 0.85rem !important;     /* smaller headings */
+        margin-bottom: 3px !important;
     }
 
     footer .footer-section p,
     footer .footer-section li {
-        font-size: 0.7rem;
-        line-height: 1.2;
-        margin: 2px 0;
-    }
-
-    footer .footer-section ul li a {
-        font-size: 0.7rem;
+        line-height: 1.2 !important;
+        font-size: 0.75rem !important;     /* tiny paragraph text */
     }
 
     footer .social-links a {
-        font-size: 0.75rem;
-        margin: 0 4px;
+        font-size: 0.85rem !important;
+        margin: 2px !important;
     }
 
     footer .copyright {
-        font-size: 0.65rem;
-        margin-top: 5px;
+        font-size: 0.7rem !important;
+        margin-top: 5px !important;
     }
 }

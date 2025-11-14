@@ -1,70 +1,61 @@
 // ==============================
-// MAIN JS FOR MUGABE IVAN & CO.
+// HAMBURGER MENU TOGGLE
 // ==============================
-
-// ====== HAMBURGER MENU TOGGLE ======
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
-    // Toggle hamburger animation
-    hamburger.classList.toggle('active');
-    
-    // Slide mobile nav in/out
-    navLinks.classList.toggle('active');
+    navLinks.classList.toggle('active');  // show/hide menu
+    hamburger.classList.toggle('active'); // animate hamburger
 });
 
-// Close menu when a nav link is clicked
-document.querySelectorAll('#nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
+// ==============================
+// OPTIONAL: SMOOTH SCROLL
+// Applies if you add internal links like #about, #services
+// ==============================
+const links = document.querySelectorAll('a[href^="#"]');
+
+links.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+        // Close hamburger menu after clicking on mobile
+        if(navLinks.classList.contains('active')) {
             navLinks.classList.remove('active');
             hamburger.classList.remove('active');
         }
     });
 });
+// Hamburger Menu Toggle
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
 
-// ====== OPTIONAL: SCROLL TO TOP BUTTON ======
-const scrollBtn = document.createElement('button');
-scrollBtn.innerText = '↑';
-scrollBtn.id = 'scrollBtn';
-scrollBtn.style.cssText = `
-    position: fixed;
-    bottom: 30px;
-    right: 20px;
-    display: none;
-    background-color: #0b1d3a;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 18px;
-    z-index: 500;
-`;
-document.body.appendChild(scrollBtn);
-
-scrollBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    hamburger.addEventListener('click', function () {
+        navLinks.classList.toggle('open');
+        hamburger.classList.toggle('active');
+    });
 });
-
-// Show/hide scroll button
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollBtn.style.display = 'block';
-    } else {
-        scrollBtn.style.display = 'none';
-    }
-});
-
-// ====== OPTIONAL: SMOOTH SCROLL FOR ANCHORS ======
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href');
-        if (targetId.length > 1) {
-            e.preventDefault();
-            const targetEl = document.querySelector(targetId);
-            targetEl.scrollIntoView({ behavior: 'smooth' });
+<script src="js/animation.js" defer></script>
+document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    const form = e.target;
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if(response.ok){
+            alert("Thank you! Your message has been sent.");
+            form.reset();
+        } else {
+            alert("Oops! There was a problem submitting your form.");
         }
     });
 });
