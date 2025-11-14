@@ -1352,3 +1352,243 @@ footer .copyright {
         font-size: 0.8rem;
     }
 }
+/* ==============================
+   CONTACT PAGE STYLES
+============================== */
+
+/* Hero Section */
+.hero-contact {
+    position: relative;
+    text-align: center;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-contact .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.hero-contact .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    max-width: 90%;
+}
+
+.hero-contact .hero-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero-contact .hero-text p {
+    font-size: 1rem;
+}
+
+/* Contact Section */
+.contact-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-section h2 {
+    color: #0b1d3a;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-section p.contact-intro {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+/* Contact Wrapper Flex */
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #f39c12;
+}
+
+.contact-form button.btn {
+    padding: 12px 25px;
+    background-color: #0b1d3a;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button.btn:hover {
+    background-color: #f39c12;
+}
+
+/* Contact Info + Map */
+.contact-info {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.info-box h3 {
+    margin-bottom: 10px;
+    color: #0b1d3a;
+}
+
+.info-box p {
+    margin: 5px 0;
+}
+
+/* Map */
+.contact-info .map iframe {
+    width: 100%;
+    height: 250px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* Responsive Contact Page */
+@media (max-width: 992px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-contact {
+        height: 400px;
+    }
+
+    .hero-contact .hero-text h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-contact .hero-text p {
+        font-size: 0.95rem;
+    }
+
+    .contact-info .map iframe {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-contact {
+        height: 300px;
+    }
+
+    .hero-contact .hero-text {
+        padding: 15px 20px;
+    }
+
+    .hero-contact .hero-text h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero-contact .hero-text p {
+        font-size: 0.8rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .contact-form button.btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+.contact-card {
+    display: flex;
+    flex-wrap: wrap;      /* ensures responsiveness */
+    gap: 30px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Contact form column */
+.contact-form {
+    flex: 1 1 45%;        /* takes ~45% width */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Contact info + map column */
+.contact-info {
+    flex: 1 1 45%;        /* takes ~45% width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Map size */
+.contact-info .map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* Responsive: stack on mobile */
+@media(max-width: 992px) {
+    .contact-card {
+        flex-direction: column;
+    }
+}
