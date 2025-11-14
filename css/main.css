@@ -65,18 +65,27 @@ body {
     color: #f39c12;
 }
 
-/* Hamburger */
+/* ==============================
+   HAMBURGER MENU
+============================== */
 .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
     cursor: pointer;
-    gap: 5px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 300;
 }
 
 .hamburger .bar {
-    width: 25px;
+    width: 100%;
     height: 3px;
     background-color: #fff;
+    border-radius: 2px;
     transition: all 0.3s ease;
 }
 
@@ -91,35 +100,42 @@ body {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ============= MOBILE NAVBAR FIX ============= */
+/* ============= MOBILE NAV SLIDE ============= */
 @media (max-width: 768px) {
-
-    /* Show hamburger */
-    .hamburger {
-        display: flex;
-    }
-
-    /* Mobile menu (hidden by default) */
     #nav-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        background-color: #0b1d3a;
+        display: flex;
         flex-direction: column;
-        padding: 15px 0;
-        display: none;
+        position: fixed;
+        top: 0;
+        right: -250px; /* start hidden off-screen */
+        width: 250px;
+        height: 100%;
+        background-color: #0b1d3a;
+        padding-top: 60px;
         text-align: center;
-        z-index: 200;
+        transition: right 0.4s ease; /* smooth slide */
+        z-index: 299;
+        border-radius: 0 0 0 6px;
     }
 
-    /* When opened */
     #nav-links.active {
-        display: flex;
+        right: 0; /* slide in when active */
     }
 
     #nav-links li {
-        margin: 12px 0;
+        margin: 20px 0;
+    }
+
+    #nav-links li a {
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    #nav-links li a:hover {
+        color: #f39c12;
     }
 }
 
@@ -309,36 +325,32 @@ footer .copyright {
     #hero .hero-text p {
         font-size: 0.8rem;
     }
-}
 
-/* ==============================
-   ULTRA-COMPACT MOBILE FOOTER
-============================== */
-@media (max-width: 480px) {
+    /* ULTRA-COMPACT MOBILE FOOTER */
     footer {
-        padding: 10px 5px;  /* minimal padding */
-        font-size: 0.7rem;  /* smaller text */
+        padding: 10px 5px;
+        font-size: 0.7rem;
     }
 
     footer .footer-container {
-        flex-direction: column;  /* stack sections vertically */
-        gap: 5px;               /* minimal space between sections */
+        flex-direction: column;
+        gap: 5px;
         text-align: center;
     }
 
     footer .footer-section {
-        margin: 3px 0;          /* reduce spacing between sections */
-        padding: 0;             /* remove extra padding */
+        margin: 3px 0;
+        padding: 0;
     }
 
     footer .footer-section h3 {
-        font-size: 0.85rem;     /* smaller headings */
+        font-size: 0.85rem;
         margin-bottom: 3px;
     }
 
     footer .footer-section p,
     footer .footer-section li {
-        font-size: 0.7rem;      /* smaller text */
+        font-size: 0.7rem;
         line-height: 1.2;
         margin: 2px 0;
     }
@@ -348,7 +360,7 @@ footer .copyright {
     }
 
     footer .social-links a {
-        font-size: 0.75rem;     /* smaller social icons */
+        font-size: 0.75rem;
         margin: 0 4px;
     }
 
@@ -357,4 +369,3 @@ footer .copyright {
         margin-top: 5px;
     }
 }
-
