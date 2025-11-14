@@ -59,3 +59,21 @@ document.getElementById('contact-form').addEventListener('submit', function(e){
         }
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active'); // animate hamburger
+        navLinks.classList.toggle('active');  // show/hide menu
+    });
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active'); // animate hamburger
+        navLinks.classList.toggle('active');  // show/hide mobile menu
+    });
+});

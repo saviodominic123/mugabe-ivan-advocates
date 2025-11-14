@@ -9,110 +9,141 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <div class="wrapper">
-        <!-- Header / Navbar -->
-        <header>
-  <nav class="navbar">
-    <!-- Logo -->
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/logo.jpg" alt="MUGABE IVAN & CO. ADVOCATES Logo" height="50">
-      </a>
-    </div>
+<div class="wrapper">
 
-    <!-- Hamburger menu for mobile -->
-    <div class="hamburger" id="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-
-    <!-- Navigation links -->
-    <ul id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="cases.html">Cases</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-        <!-- Hero Section -->
-        <section id="page-hero">
-            <img src="images/hero.jpg" alt="Services Mugabe Ivan Advocates" class="hero-img">
-            <div class="hero-text">
-                <h1>Our Services</h1>
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.jpg" alt="MUGABE IVAN & CO. ADVOCATES Logo" height="50">
+                </a>
             </div>
-        </section>
 
-        <!-- Services Section -->
-        <section class="services container">
-            <h2>What We Offer</h2>
-            <ul>
-                <li>Corporate Law</li>
-                <li>Civil Litigation</li>
-                <li>Criminal Defense</li>
-                <li>Legal Consultations</li>
-                <li>Contract Drafting & Review</li>
-                <li>Property & Land Law</li>
-                <li>Family Law</li>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="cases.html">Cases</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-        </section>
+        </nav>
+    </header>
 
-        <!-- Call-to-Action Section -->
-        <section class="cta container">
-            <h2>Need Legal Assistance?</h2>
-            <p>Contact us today for a professional consultation.</p>
-            <a href="contact.html" class="btn">Contact Us</a>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero-services">
+        <div class="hero-text">
+            <h1>Our Services</h1>
+            <p>Professional legal solutions tailored to your needs</p>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>About Us</h3>
-                    <p>MUGABE IVAN & CO. ADVOCATES is a leading law firm in Uganda providing professional legal services in corporate, civil, and criminal law.</p>
-                </div>
+    <!-- Services Cards Section -->
+    <section class="services-section container">
+        <h2>What We Offer</h2>
+        <p>Our experienced lawyers provide a full range of legal services to meet your individual and business needs.</p>
 
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="cases.html">Cases</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>Office: 123 Legal Street, Kampala, Uganda</p>
-                    <p>Phone: +256 700 123 456</p>
-                    <p>Email: info@mugabeivan.com</p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#">Facebook</a>
-                        <a href="#">Twitter</a>
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Instagram</a>
-                    </div>
-                </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa fa-briefcase"></i>
+                <h3>Corporate Law</h3>
+                <p>Providing legal support for companies, including contracts, compliance, and corporate governance.</p>
             </div>
 
-            <div class="copyright">
-                &copy; 2025 MUGABE IVAN & CO. ADVOCATES. All rights reserved.
+            <div class="service-card">
+                <i class="fa fa-gavel"></i>
+                <h3>Civil Litigation</h3>
+                <p>Representation in civil disputes, from negotiation to court proceedings.</p>
             </div>
-        </footer>
-    </div>
 
-    <script src="js/main.js" defer></script>
-    <script src="js/validation.js" defer></script>
+            <div class="service-card">
+                <i class="fa fa-shield"></i>
+                <h3>Criminal Defense</h3>
+                <p>Protecting your rights and providing expert defense in criminal cases.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa fa-comments"></i>
+                <h3>Legal Consultations</h3>
+                <p>Professional advice for individuals and businesses on legal matters.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa fa-file-text"></i>
+                <h3>Contract Drafting & Review</h3>
+                <p>Ensuring your contracts are clear, enforceable, and protect your interests.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa fa-home"></i>
+                <h3>Property & Land Law</h3>
+                <p>Handling property transactions, disputes, and land registration matters.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa fa-users"></i>
+                <h3>Family Law</h3>
+                <p>Guidance and representation in divorce, custody, and other family matters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta container">
+        <h2>Need Legal Assistance?</h2>
+        <p>Contact us today for a professional consultation.</p>
+        <a href="contact.html" class="btn">Contact Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>MUGABE IVAN & CO. ADVOCATES is a leading law firm in Uganda providing professional legal services in corporate, civil, and criminal law.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="cases.html">Cases</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Office: Kisozi Close, Kampala, Uganda</p>
+                <p>Phone: +256 700 123 456</p>
+                <p>Email: info@mugabeivan.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2025 MUGABE IVAN & CO. ADVOCATES. All rights reserved.
+        </div>
+    </footer>
+
+</div>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>
