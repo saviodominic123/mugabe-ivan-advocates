@@ -1818,3 +1818,36 @@ footer .copyright {
         margin-top: 3px;
     }
 }
+/* Show full horizontal menu on small screens instead of hamburger */
+@media (max-width: 768px) {
+    .hamburger {
+        display: none; /* hide hamburger */
+    }
+
+    #nav-links {
+        display: flex !important;  /* always visible */
+        flex-direction: row;        /* horizontal layout */
+        justify-content: space-around;
+        width: 100%;
+        position: relative;
+        top: 0;
+        background-color: #0b1d3a;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    #nav-links li {
+        margin: 0;
+    }
+
+    #nav-links li a {
+        font-size: 16px;
+        color: #fff;
+        font-weight: bold;
+        padding: 8px 12px;
+    }
+
+    #nav-links li a:hover {
+        color: #f39c12;
+    }
+}
