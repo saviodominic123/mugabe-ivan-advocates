@@ -1851,3 +1851,63 @@ footer .copyright {
         color: #f39c12;
     }
 }
+.navbar {
+    background-color: #0b1d3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #f39c12;
+}
+@media (max-width: 768px) {
+    #nav-links {
+        display: flex !important;   /* always show tabs */
+        flex-direction: row !important; /* horizontal menu */
+        justify-content: space-around;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #0b1d3a;
+        padding: 10px 0;
+        z-index: 100;
+    }
+
+    #nav-links li {
+        margin: 0;
+    }
+
+    #nav-links li a {
+        font-size: 16px;
+        padding: 10px 5px;
+    }
+
+    body {
+        padding-top: 60px; /* prevent content overlap */
+    }
+}
