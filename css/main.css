@@ -1249,3 +1249,106 @@ footer .copyright {
         color: #fff;
     }
 }
+/* Hero section adjustments for desktop */
+.hero-about {
+    position: relative;
+    text-align: center;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-about .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7); /* optional dark overlay */
+}
+
+.hero-about .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.5); /* semi-transparent overlay */
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    max-width: 90%;
+}
+
+.hero-about .hero-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero-about .hero-text p {
+    font-size: 1rem;
+}
+
+/* ===== Mobile adjustments ===== */
+@media (max-width: 768px) {
+    .hero-about {
+        height: 400px;
+    }
+    .hero-about .hero-text h1 {
+        font-size: 1.7rem;
+    }
+    .hero-about .hero-text p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-about {
+        height: 300px;
+    }
+    .hero-about .hero-text {
+        padding: 10px 15px;
+    }
+    .hero-about .hero-text h1 {
+        font-size: 1.4rem;
+    }
+    .hero-about .hero-text p {
+        font-size: 0.8rem;
+    }
+}
+/* Mobile Hero */
+@media (max-width: 768px) {
+    .hero-about .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    .hero-about .hero-text p {
+        font-size: 1rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .about-section h3 {
+        font-size: 1.2rem;
+    }
+    .about-section p, .about-section ul li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-about .hero-text h1 {
+        font-size: 1.5rem;
+    }
+    .hero-about .hero-text p {
+        font-size: 0.85rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.3rem;
+    }
+    .about-section h3 {
+        font-size: 1.05rem;
+    }
+    .about-section p, .about-section ul li {
+        font-size: 0.8rem;
+    }
+}
