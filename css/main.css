@@ -91,30 +91,35 @@ body {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Mobile Navbar */
+/* ============= MOBILE NAVBAR FIX ============= */
 @media (max-width: 768px) {
+
+    /* Show hamburger */
     .hamburger {
         display: flex;
     }
 
+    /* Mobile menu (hidden by default) */
     #nav-links {
         position: absolute;
         top: 60px;
-        left: 0;
+        right: 0;
         width: 100%;
-        flex-direction: column;
         background-color: #0b1d3a;
+        flex-direction: column;
+        padding: 15px 0;
         display: none;
-        padding: 10px 0;
+        text-align: center;
+        z-index: 200;
     }
 
+    /* When opened */
     #nav-links.active {
         display: flex;
     }
 
     #nav-links li {
-        margin: 10px 0;
-        text-align: center;
+        margin: 12px 0;
     }
 }
 
